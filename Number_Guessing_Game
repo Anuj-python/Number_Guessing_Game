@@ -1,0 +1,23 @@
+import random
+
+print("welcome to the Number guessing game .\nyou have seven chances to guess the number")
+
+chances= 7
+counter =0
+
+guess_no= random.randrange(100)
+
+while counter < chances:
+    counter+=1
+    my_guess= int(input("Enter the number to guess: "))
+
+    if my_guess == guess_no:
+        print("you guessed the exact number ,Thank you", guess_no)
+        break
+    elif counter >=chances and my_guess!=guess_no:
+        print("you guessed wrong number,better luck next time, the number is ", guess_no)
+
+    elif my_guess > guess_no:
+        print("you guess the higher number")
+    elif my_guess< guess_no:
+        print("you guessed the lower number")
